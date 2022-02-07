@@ -6,6 +6,9 @@ vcpkg_from_github(
     REF boost-1.83.0
     SHA512 35ab1c2b69861ef2c6971c159d13d2f9d4ed463d94a6d000acfdf0d58a358ffb7a371dc5dff047db0d03d588c43f41da2915be16c25e92af4512db6b5d8b8fcc
     HEAD_REF master
+	PATCHES
+		"synchronization-lib.patch"
+		"synchronization-lib2.patch"
 )
 
 file(READ "${SOURCE_PATH}/build/Jamfile.v2" _contents)
